@@ -4194,16 +4194,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svelte@npm:^3.47.0":
-  version: 3.47.0
-  resolution: "svelte@npm:3.47.0"
-  checksum: 247892585543ab0fc4781e36d5469ad0ce8afd4c6c440639cb0c99564a0b435ee0838482443665a905e11b7f500a1cf68475bec6a938b668e1e73c2e0badfc4e
-  languageName: node
-  linkType: hard
-
-"svelte@workspace:.":
+"svelte3@workspace:.":
   version: 0.0.0-use.local
-  resolution: "svelte@workspace:."
+  resolution: "svelte3@workspace:."
   dependencies:
     "@sveltejs/vite-plugin-svelte": ^1.0.0-next.41
     autoprefixer: ^10.4.4
@@ -4231,6 +4224,13 @@ __metadata:
     vite-plugin-stylelint: ^2.1.0
   languageName: unknown
   linkType: soft
+
+"svelte@npm:^3.47.0":
+  version: 3.47.0
+  resolution: "svelte@npm:3.47.0"
+  checksum: 247892585543ab0fc4781e36d5469ad0ce8afd4c6c440639cb0c99564a0b435ee0838482443665a905e11b7f500a1cf68475bec6a938b668e1e73c2e0badfc4e
+  languageName: node
+  linkType: hard
 
 "svg-tags@npm:^1.0.0":
   version: 1.0.0

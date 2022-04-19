@@ -8,13 +8,15 @@ pnpm-debug.log*
 lerna-debug.log*
 
 .yarn/*
+.pnp.cjs
+yarn.lock
 node_modules
 dist
 dist-ssr
 *.local
 
 # Editor directories and files
-!.vscode/extensions.json
+#!.vscode/extensions.json
 .idea
 .DS_Store
 *.suo
