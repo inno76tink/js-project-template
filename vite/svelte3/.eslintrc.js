@@ -18,7 +18,7 @@ module.exports = {
   ],
   rules: {
     // eslint 예외
-    'no-console': 'off',
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off'
   },
    overrides: [
     {
