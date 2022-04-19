@@ -1,0 +1,10 @@
+{
+  "eslint.validate": [
+    "svelte"
+  ],
+  "stylelint.validate": [
+    "css",
+    "postcss",
+    "svelte"
+  ]
+}
