@@ -1,12 +1,12 @@
 {
-  "name": "svelte3",
+  "name": "svelte3-ts",
   "private": true,
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "svelte-check": "svelte-check",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
     "lint:eslint": "eslint --ignore-path .gitignore . --ext .js,.svelte",
     "lint:stylelint": "stylelint --ignore-path .gitignore ./**/*.{css,svelte}",
     "lint:format": "prettier --check --ignore-path .gitignore --plugin-search-dir=. ./**/*.{css,js,svelte}",
@@ -19,7 +19,8 @@
     "lint-staged": "lint-staged"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.41",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+    "@tsconfig/svelte": "^2.0.1",
     "autoprefixer": "^10.4.4",
     "eslint": "^8.13.0",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -28,7 +29,6 @@
     "eslint-plugin-svelte3": "^3.4.1",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.8",
-    "npm-run-all": "^4.1.5",
     "postcss": "^8.4.12",
     "postcss-html": "^1.4.1",
     "prettier": "^2.6.2",
@@ -38,14 +38,17 @@
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-recess-order": "^3.0.0",
     "stylelint-config-standard": "^25.0.0",
-    "svelte": "^3.47.0",
-    "svelte-check": "^2.7.0",
-    "vite": "^2.9.5",
+    "svelte": "^3.44.0",
+    "svelte-check": "^2.2.7",
+    "svelte-preprocess": "^4.9.8",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.2",
     "vite-plugin-eslint": "^1.4.0",
     "vite-plugin-stylelint": "^2.1.0"
   },
   "lint-staged": {
-    "*.{js,jsx,css,svelte}": [
+    "*.{js,jsx,ts,tsx,css,svelte}": [
       "yarn fix:all"
     ]
   },

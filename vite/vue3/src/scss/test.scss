@@ -1,0 +1,14 @@
+/* test.scss */
+
+$len : 100;
+
+@for $i from 1 through $len {
+
+    .test-#{$i} {
+
+        color: yellow;
+        font-size: $i + px;
+
+    }
+
+}
