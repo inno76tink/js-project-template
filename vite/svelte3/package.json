@@ -7,15 +7,16 @@
     "build": "vite build",
     "preview": "vite preview",
     "svelte-check": "svelte-check",
-    "format:check": "prettier --check --ignore-path .gitignore --plugin-search-dir=. ./**/*.{json,css,js,svelte}",
-    "format:fix": "prettier --write --ignore-path .gitignore --plugin-search-dir=. ./**/*.{json,css,js,svelte}",
     "lint:eslint": "eslint --ignore-path .gitignore . --ext .js,.svelte",
-    "fix:eslint": "eslint --fix --ignore-path .gitignore . --ext .js,.svelte",
     "lint:stylelint": "stylelint --ignore-path .gitignore ./**/*.{css,svelte}",
+    "lint:format": "prettier --check --ignore-path .gitignore --plugin-search-dir=. ./**/*.{json,css,js,svelte}",
+    "fix:eslint": "eslint --fix --ignore-path .gitignore . --ext .js,.svelte",
     "fix:stylelint": "stylelint --fix --ignore-path .gitignore ./**/*.{css,svelte}",
-    "lint:all": "run-s lint:eslint lint:stylelint lint:prettier",
-    "fix:all": "run-s fix:eslint fix:stylelint fix:prettier",
-    "prepare": "husky install"
+    "fix:format": "prettier --write --ignore-path .gitignore --plugin-search-dir=. ./**/*.{json,css,js,svelte}",
+    "lint:all": "yarn lint:eslint && yarn lint:stylelint && yarn lint:format",
+    "fix:all": "yarn fix:eslint && yarn fix:stylelint && yarn fix:format",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.41",
@@ -44,7 +45,9 @@
     "vite-plugin-stylelint": "^2.1.0"
   },
   "lint-staged": {
-    "*.(js,css,svelte)": "npm run fix:all"
+    "*.{js,json,css,svelte}": [
+      "yarn fix:all"
+    ]
   },
   "packageManager": "yarn@3.2.0"
 }

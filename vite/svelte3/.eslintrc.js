@@ -17,6 +17,8 @@ module.exports = {
     'svelte3',
   ],
   rules: {
+    // eslint 예외
+    'no-console': 'off',
   },
    overrides: [
     {
